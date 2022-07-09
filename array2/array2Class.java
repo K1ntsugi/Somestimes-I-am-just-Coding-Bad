@@ -1,4 +1,5 @@
-public class sum13Class {
+public class array2Class {
+    
 
     public int sum13(int[] nums) {
         if(nums.length == 0){
@@ -24,5 +25,6 @@ public class sum13Class {
         return sum + _sum13(nums, ++count, checkNext13);
       }
       
-    
+
+
 }
