@@ -83,6 +83,36 @@ public class ap1Class {
         return count;
     }
 
+    // that same "igitt" by Bene
+    public int commonTwoBene(String[] a, String[] b) {
+        int i = 0;
+        int j = 0;
+        int count = 0;
+      
+        while(i < a.length && j < b.length){
+          if(a[i].compareTo(b[j]) == 0){
+            if(i == 0 || j == 0){
+              count++;
+              i++;
+              j++;
+            }else if(a[i] != a[i-1] && b[j] != b[j-1]){
+              count++;
+              i++;
+              j++;
+            }else{
+              break;
+            }
+          }else{
+            if(a[i].compareTo(b[j]) < 0){
+              i++;
+            }else if(a[i].compareTo(b[j]) > 0){
+              j++;
+            }
+          }
+        }
+        return count;
+      }
+
 
     /* 
      * 
