@@ -83,6 +83,38 @@ public class ap1Class {
         return count;
     }
 
+    // another dry try
+    public int commonTwo2(String[] a, String[] b) {
+  
+      int aCount = 0;
+      int bCount = 0;
+      int counter = 0;
+      
+      while (aCount < a.length  && bCount < b.length ) {
+        
+        if (a[aCount].compareTo(b[bCount]) == 0) {
+          counter++;
+          String compVal = a[aCount];
+          while (0 == compVal.compareTo(a[aCount]) && aCount < a.length-1) {
+            aCount++;
+          }
+          while (0 == compVal.compareTo(b[bCount]) && bCount < b.length-1) {
+            bCount++;
+          }
+        } else {
+        if(a[aCount].compareTo(b[bCount]) < 0 && aCount < a.length) {
+          aCount++;
+        }
+        if(a[aCount].compareTo(b[bCount]) > 0 && bCount < b.length) {
+          bCount++;
+        }
+    
+      }
+    }
+      return counter;
+    }
+    
+
     // that same "igitt" by Bene
     public int commonTwoBene(String[] a, String[] b) {
         int i = 0;

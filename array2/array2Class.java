@@ -26,5 +26,29 @@ public class array2Class {
       }
       
 
+      public String[] fizzBuzz(int start, int end) {
+  
+        int[] valueChain = new int[end - start];
+        int j = 0;
+        for (int i = start; i < end; i++) {
+          valueChain[j++] = i;
+        }
+        
+        String[] returnArr = new String[end-start];
+        
+        for(int i = 0; i < valueChain.length; i++) {
+          if (valueChain[i] % 3 == 0 && valueChain[i] % 5 == 0) {
+            returnArr[i] = "FizzBuzz";
+          } else if(valueChain[i] % 3 == 0) {
+            returnArr[i] = "Fizz";
+          } else if (valueChain[i] % 5 == 0) {
+            returnArr[i] = "Buzz";
+          } else {
+            returnArr[i] = String.valueOf(valueChain[i]);
+          }
+        }
+        return returnArr;
+      }
+      
 
 }
